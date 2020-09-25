@@ -7,7 +7,7 @@
     <title>Simple Clock</title>
 </head>
 <body>
-    <div id="clock">
+    <div id="clock" class="image-head">
         <h2>The time is now</h2>
         <div id="time">
             <div><span id="hour">00</span><span>Hours</span></div>
@@ -15,6 +15,13 @@
             <div><span id="seconds">00</span><span>Seconds</span></div>
         </div>
     </div>
+   
+    <audio src="avatar.mp3"></audio>
+    <button id="button">Play Music
+      <i class="fas fa-volume-up"></i>
+    </button>
+    
+
     <script type="text/javascript">
 
     function clock () {
@@ -33,7 +40,27 @@
 
     var interval = setInterval(clock, 1);
 
+
+const button = document.querySelector("#button");
+const icon = document.querySelector("#button > i");
+const audio = document.querySelector("audio");
+
+button.addEventListener("click", () => {
+  if (audio.paused) {
+    audio.volume = 0.2;
+    audio.play();
+    icon.classList.remove('fa-volume-up');
+    icon.classList.add('fa-volume-mute');
+    
+  } else {
+    audio.pause();
+    icon.classList.remove('fa-volume-mute');
+    icon.classList.add('fa-volume-up');
+  }
+  button.classList.add("fade");
+});
     </script>
-   <iframe width="0" height="0" src="https://www.youtube.com/embed/cWkX1JqOjLc?autoplay=1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    
+   
 </body>
 </html>

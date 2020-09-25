@@ -9,13 +9,13 @@ body {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background-image: url("https://fiverr-res.cloudinary.com/images/q_auto,f_auto/gigs2/140913522/original/b6166d8638c5e6d0ee578b49a3eb9c0a7cfc6f3f/create-lofi-hip-hop-animations.jpg");
+    /* background-image: url("https://i.pinimg.com/originals/5f/00/01/5f0001e10fc9dfaf8c104b9d32eb8285.jpg"); */
 }
 
 #clock h2 {
     position: relative;
     display: block;
-    color: #fff;
+    color: black;
     text-align: center;
     margin: 10px 0;
     font-weight: 700;
@@ -69,3 +69,60 @@ body {
 }
 
 
+audio {
+    display: none;
+  }
+  
+  p {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    color: rgba(238, 238, 238, 0.6);
+    font-size: 20px;
+  }
+  
+  button {
+    font-size: 14px;
+    color: #eee;
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100px;
+    padding: 15px;
+    border: none;
+    border-radius: 2px;
+    outline: none;
+    background: rgba(115, 67, 167, 0.8);
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+    opacity: 0.8;
+    cursor: pointer;
+    transition: all 0.4s ease-out;
+  }
+  
+  button.fade:hover {
+    opacity: 0.8;
+  }
+  
+  .fade {
+    opacity: 0.2;
+    top: 0;
+    left: 0;
+    transform: translate(0, 0);
+  }
+
+
+  @-webkit-keyframes changeBg
+  {
+     0%   {background-image: url("https://i.imgur.com/WK6SyTe.png");}
+     25%  {background-image: url("https://cdn.suwalls.com/wallpapers/cartoons/aang-avatar-the-last-airbender-27292-1920x1080.jpg");}
+     50%  {background-image: url("https://images.alphacoders.com/961/thumb-1920-961189.png");}
+     100% {background-image: url("https://wallpaperaccess.com/full/2890344.png");}
+  }
+   
+  body
+  {
+     -webkit-animation: changeBg 30s infinite;
+  }
